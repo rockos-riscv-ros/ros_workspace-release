@@ -1,4 +1,4 @@
-From d8288affa47aa58a99fe92bf5e9bd2eeba647ac9 Mon Sep 17 00:00:00 2001
+From e657338b1db2beeae35242d4488674bb7d2cb358 Mon Sep 17 00:00:00 2001
 From: Scott K Logan <logans@cottsay.net>
 Date: Thu, 12 Dec 2024 14:29:24 -0600
 Subject: [PATCH 2/2] Detect Python 3 version at build time
@@ -9,7 +9,7 @@ Co-authored-by: Jose Luis Rivero <jrivero@osrfoundation.org>
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/debian/rules.em b/debian/rules.em
-index e5ef76418196..9941d9818371 100755
+index e5ef764..9941d98 100755
 --- a/debian/rules.em
 +++ b/debian/rules.em
 @@ -27,7 +27,8 @@ export DEB_HOST_MULTIARCH := $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
@@ -23,5 +23,5 @@ index e5ef76418196..9941d9818371 100755
  %:
  	dh $@@ -v --buildsystem=cmake --builddirectory=.obj-$(DEB_HOST_GNU_TYPE)
 -- 
-2.47.0
+2.47.1
 
